@@ -1,0 +1,152 @@
+/* ---COLORS--- */
+
+// Naturel
+$N0: #ffffff; // N0
+$N10: #FAFBFC; // N1
+$N20: #F4F5F7; // N2
+$N25: #EAEAEA;
+$N30: #EBECF0; // N3
+$N40: #DFE1E7; // N4
+$N50: #C1C7D0; // N5
+$N60: #B3BAC5; // N6
+$N70: #A5ADBA;
+$N80: #97A0AF; // N7
+$N90: #8993A4;
+$N100: #7A869A; // N8
+$N200: #6B778C;
+$N300: #5E6C84; // N9
+$N400: #505F79;
+$N500: #42526E; // N10
+$N600: #344563;
+$N700: #253858; // N11
+$N800: #172B4D; // N12
+$N900: #091E42; // N13
+$N950: #090000;
+$N00: #000000;
+
+// Blue
+$B50: #DEEBFF;
+$B75: #B3D4FF;
+$B100: #4C9AFF;
+$B200: #2784FF;
+$B300: #0065FF;
+$B400: #0152CC;
+$B500: #0647A6;
+
+// Aqua
+$A50: #E6FCFF;
+$A75: #B3F5FF;
+$A100: #79E2F1;
+$A200: #02C7E6;
+$A300: #00B8D9;
+$A400: #03A3BF;
+$A500: #008DA6;
+
+// Cyan
+$C50: #E6E9FF;
+$C75: #B6BDF2;
+$C100: #8D96D9;
+$C200: #7782D9;
+$C300: #5464C0;
+$C400: #4356AA;
+$C500: #324A94;
+$C600: #324B94;
+
+// Green
+$G50: #E3FCEF;
+$G75: #ACF4D1;
+$G100: #79F1C0;
+$G200: #57D8A3;
+$G300: #36B37E;
+$G400: #028759;
+$G500: #016644;
+
+// Yellow
+$Y50: #FEFAE6;
+$Y75: #FFF0B3;
+$Y100: #FEE380;
+$Y200: #FFC402;
+$Y300: #FFAB01;
+$Y400: #FF991F;
+$Y500: #FF8B00;
+
+// Red
+$R50: #FFEBE6;
+$R75: #FFBDAD;
+$R100: #FF8F74;
+$R200: #FF7552;
+$R300: #FF5630;
+$R400: #DE350C;
+$R500: #BF2600;
+
+// Purple
+$P50: #EAE6FF;
+$P75: #C0B6F2;
+$P100: #998DD9;
+$P200: #8777D9;
+$P300: #6554C0;
+$P400: #5243AA;
+$P500: #403294;
+
+/* other color */
+$SH1: 0 1px 4px -1px rgba(0,0,0,0.11);
+$SH2: 0 1px 2px -1px rgba(0,0,0,0.11);
+$SH3: 0 1px 5px -1px rgba(0,0,0,0.15);
+$SH4: 0 5px 10px -1px rgba(0,0,0,0.12);
+$SH5: 0 1px 5px 1px rgba(0,0,0,0.24);
+$SH6: 0 1px 1px 0 rgba(0,0,0,0.05);
+$SH7: 0 1px 1px 0 rgba(0,0,0,0.10);
+$SH8: 0 2px 4px 0 rgba(0,0,0,0.05);
+$SH9: 0 1px 5px -2px rgba(147,147,147,0.20);
+
+// Charts colors 
+$blue: #7A94C1;
+$orange: #E3916B;
+$green: #72B17E;
+$red: #CB696D;
+
+@function px_to_rem($target, $context: $base-size) {
+  @if $target==0 {
+    @return 0;
+  }
+
+  @return $target / $context + 0rem;
+}
+
+$base-size: 16px;
+
+/* ---FONT SIZE--- */
+$H300: px_to_rem(30px);
+$H240: px_to_rem(24px);
+$H220: px_to_rem(22px);
+$H200: px_to_rem(20px);
+$H90: px_to_rem(19px);
+$H80: px_to_rem(18px);
+$H70: px_to_rem(17px);
+$H60: px_to_rem(16px);
+$H50: px_to_rem(15px);
+$H40: px_to_rem(14px);
+$H30: px_to_rem(13px);
+$H20: px_to_rem(12px);
+$H10: px_to_rem(11px);
+$H0: px_to_rem(10px);
+$H9: px_to_rem(9px);
+
+/* Screens */
+$screen-iphone-6: 375px;
+$screen-iphone-plus: 414px;
+$screen-tablet-small: 480px;
+$screen-tablet: 768px;
+$screen-tablet-large: 860px;
+$screen-netbook: 960px;
+$screen-desktop: 1024px;
+$screen-desktop-large: 1280px;
+$screen-hd: 1366px;
+$screen-fullhd: 1440px;
+$screen-retina: 1660px;
+
+// FONTS
+$base-font: "Poppins", sans-serif;
+
+// padding left-right
+$px: 40px;

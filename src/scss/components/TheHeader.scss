@@ -1,0 +1,38 @@
+.the-header {
+  background-color: $N0;
+  margin-bottom: 16px;
+  padding: 0 24px;
+  @include flex-row(space-between, stretch);
+  &__breadcrumbs {
+    padding: 0;
+    @include flex-row(flex-start, center);
+    // margin: 16px 0;
+  }
+  &__row {
+    @include flex-row(flex-start, baseline);
+  }
+  &__header-bar {
+    @include flex-row(flex-start, center);
+    & > *:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &__button-popover {
+    padding-left: 0;
+    i {
+      transition: all 0.2s ease !important;
+    }
+    &.ant-popover-open {
+      i {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+  &__search {
+    width: 160px;
+  }
+  &__alert-button {
+    // display: inline-block;
+    font-size: 24px;
+  }
+}

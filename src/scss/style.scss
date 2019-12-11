@@ -1,0 +1,12 @@
+@import '~antd/dist/antd.css';
+
+@import './core/vars';
+@import './core/mixins';
+
+@import './common';
+
+@import './components/App.scss';
+@import './components/TheHeader.scss';
+@import './components/TheMenu.scss';
+@import './components/Devices.scss';
+@import './components/Suites.scss';

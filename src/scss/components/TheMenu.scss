@@ -1,0 +1,15 @@
+.the-menu {
+  &__logo-wrapper {
+    @include text($H60, 500, $N0);
+    margin: 24px 0 12px 24px;
+    overflow: hidden;
+  }
+  &__logo {
+    height: 32px;
+    width: auto;
+    &--collapsed {
+      position: relative;
+      left: -9px;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.devices {
+  &__row {
+    @include flex-row(flex-start, baseline);
+  }
+  &__select-wrapper {
+    flex: 1 1;
+    @include flex-row(flex-start, center);
+    flex-wrap: wrap;
+  }
+  &__select {
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+  &__toolbar {
+    margin-right: 32px;
+  }
+  &__collapse {
+    // .ant-collapse-item {
+    //   margin-bottom: 12px;
+    //   overflow: hidden;
+    //   background-color: '#f7f7f7';
+    // }
+    .ant-collapse-content-box {
+      background-color: $N20;
+      padding: 24px !important;
+    }
+
+  }
+  &__main-list {
+    padding-left: 0;
+    list-style: none;
+    @include flex-row;
+    & > * {
+      flex: 1 1 25%;
+      margin: 0;
+    }
+    & > *:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+  &__sub-list {
+    list-style: disc;
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0;
+  }
+  &__options {
+    padding: 0 0 0 24px;
+    flex: 1 1;
+    list-style: none;
+    @include flex-row(space-between, center);
+    margin: 0 60px 0 0;
+  }
+  &__item {
+    @include flex-row(space-between, center);
+  }
+  &__checkbox {
+    margin-right: 18px;
+  }
+  &__icon-device {
+    font-size: 22px;
+    position: relative;
+    bottom: -3px;
+    margin-right: 10px;
+    // @include flex-row(flex-start, center)
+  }
+  &__icon-os {
+    margin-right: 8px;
+    position: relative;
+    bottom: -1px;
+    font-size: 16px;
+  }
+  &__icon-status {
+    margin-right: 8px;
+    position: relative;
+    bottom: -1px;
+    font-size: 16px;
+  }
+  &__extra {
+    @include transition(color);
+    &:hover {
+      color: $N200;
+    }
+    &:active {
+      color: $N900;
+    }
+  }
+}
