@@ -55,7 +55,6 @@ const TheHeader = () => {
               value={state.search}
               onChange={onChangeSearch}
               dataSource={state.dataSearch}
-              placeholder="Search..."
               filterOption={(inputValue, option) =>
                 option.props.children
                   .toUpperCase()

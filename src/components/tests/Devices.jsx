@@ -61,7 +61,7 @@ const Devices = () => {
       </ul>
       <Popover placement="leftTop" title={`Item ${el}`} content={content} trigger="click">
         <Icon
-          type="setting"
+          type="ellipsis"
           className='devices__extra'
           onClick={event => {
             // If you don't want click extra trigger collapse, you can prevent this:
@@ -129,7 +129,7 @@ const Devices = () => {
           <Select
             className="devices__select"
             placeholder="OS"
-            style={{ width: 100 }}
+            style={{ width: 65 }}
           >
             <Option value="1">Option 1</Option>
             <Option value="2">Option 2</Option>
