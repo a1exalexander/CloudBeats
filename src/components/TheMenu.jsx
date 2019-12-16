@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { Menu, Icon, Layout } from "antd";
+import { Menu, Layout } from "antd";
 import { ReactComponent as IconLogo } from "../assets/svg/Cloudbeat.svg";
 import { ReactComponent as IconBeat } from "../assets/svg/Beat.svg";
+import { ReactComponent as IconExperiment } from "../assets/svg/experiment.svg";
+import { ReactComponent as IconMonitors } from "../assets/svg/Monitors.svg";
+import { ReactComponent as IconProjects } from "../assets/svg/Projects.svg";
 
 const { SubMenu } = Menu;
 const { Sider } = Layout;
@@ -32,7 +35,7 @@ const TheMenu = () => {
           key="sub1"
           title={
             <span>
-              <Icon type="experiment" />
+              <IconExperiment className="the-menu__list-icon" />
               <span>Tests</span>
             </span>
           }
@@ -47,7 +50,7 @@ const TheMenu = () => {
           key="sub2"
           title={
             <span>
-              <Icon type="desktop" />
+              <IconMonitors className="the-menu__list-icon" />
               <span>Monitors</span>
             </span>
           }
@@ -59,7 +62,7 @@ const TheMenu = () => {
           key="sub3"
           title={
             <span>
-              <Icon type="profile" />
+              <IconProjects className="the-menu__list-icon" />
               <span>Projects</span>
             </span>
           }

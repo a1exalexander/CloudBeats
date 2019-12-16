@@ -25,12 +25,15 @@
       background-color: $N20;
       padding: 24px !important;
     }
-
   }
   &__main-list {
     padding-left: 0;
     list-style: none;
     @include flex-row;
+    & > li {
+      font-weight: 500;
+      color: #1f263e;
+    }
     & > * {
       flex: 1 1 25%;
       margin: 0;
@@ -44,6 +47,10 @@
     list-style-position: inside;
     padding-left: 0;
     margin: 0;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 400;
   }
   &__options {
     padding: 0 0 0 24px;
@@ -51,6 +58,10 @@
     list-style: none;
     @include flex-row(space-between, center);
     margin: 0 60px 0 0;
+  }
+  &__option {
+    font-size: 16px;
+    color: #1f263e;
   }
   &__item {
     @include flex-row(space-between, center);
@@ -85,5 +96,8 @@
     &:active {
       color: $N900;
     }
+  }
+  .ant-collapse > .ant-collapse-item-active > .ant-collapse-header {
+    box-shadow: 0 1px 4px -1px rgba(31,38,62,0.14);
   }
 }

@@ -15,12 +15,59 @@
     margin-bottom: 0;
   }
   &__tree {
-    margin-right: 16px;
     padding: 12px 48px 12px 12px;
     width: 200px;
-    background-color: $N0;
+    background: #FAFAFC;
+    border-right: 1px solid #E3E4E8;
   }
   &__space-row {
     @include flex-row(space-between, center);
+  }
+  .ant-tree.ant-tree-directory
+    > li.ant-tree-treenode-selected
+    > span.ant-tree-node-content-wrapper::before,
+  .ant-tree.ant-tree-directory
+    .ant-tree-child-tree
+    > li.ant-tree-treenode-selected
+    > span.ant-tree-node-content-wrapper::before {
+    opacity: 0.6;
+    background: #e7e9f0;
+  }
+  .ant-tree.ant-tree-directory
+    > li
+    span.ant-tree-node-content-wrapper.ant-tree-node-selected,
+  .ant-tree.ant-tree-directory
+    .ant-tree-child-tree
+    > li
+    span.ant-tree-node-content-wrapper.ant-tree-node-selected {
+    font-size: 16px;
+    color: #1f263e;
+  }
+  .ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper,
+  .ant-tree.ant-tree-directory
+    .ant-tree-child-tree
+    > li
+    span.ant-tree-node-content-wrapper {
+    font-size: 16px;
+    color: #1f263e;
+  }
+  & .ant-tree-node-content-wrapper-open {
+    font-weight: 500;
+  }
+  & .ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-switcher, .ant-tree.ant-tree-directory .ant-tree-child-tree > li.ant-tree-treenode-selected > span.ant-tree-switcher {
+    color: #1f263e;
+  }
+  & .ant-btn-primary {
+    background-color: #3DC0EF;
+    border-color: #3DC0EF;
+  }
+  & .ant-tabs-nav .ant-tabs-tab-active {
+    color: #3DC0EF;
+  }
+  & .ant-tabs-ink-bar {
+    background-color: #3DC0EF;
+  }
+  & .ant-tabs-nav .ant-tabs-tab {
+    font-weight: 500;
   }
 }
