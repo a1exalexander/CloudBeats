@@ -1,30 +1,151 @@
-import React from "react";
-import { Tabs, Typography, Tree, Button } from "antd";
+import React, { useState } from "react";
+import {
+  Tabs,
+  Typography,
+  Tree,
+  Button,
+  AutoComplete,
+  Icon,
+  Input,
+  Popover
+} from "antd";
 import Devices from "../../components/tests/Devices";
+import { ReactComponent as IconEdit } from "../../assets/svg/Edit.svg";
+import { ReactComponent as IconRemove } from "../../assets/svg/Remove.svg";
+import { ReactComponent as IconNewDoc } from "../../assets/svg/New document.svg";
+import { ReactComponent as IconNewFolder } from "../../assets/svg/New folder.svg";
 
 const { TabPane } = Tabs;
 const { Title } = Typography;
 const { TreeNode, DirectoryTree } = Tree;
 
 const Suites = () => {
+  const [state, setState] = useState({
+    search: "",
+    dataSearch: [],
+    showProjects: true
+  });
+
+  const onSearch = searchText => {
+    setState(ps => ({
+      ...ps,
+      dataSearch: !searchText
+        ? []
+        : [searchText, searchText.repeat(2), searchText.repeat(3)]
+    }));
+  };
+
+  const onChangeList = () => {
+    setState(ps => ({
+      ...ps,
+      showProjects: !ps.showProjects
+    }));
+  };
+
+  const onChangeSearch = search => {
+    setState(ps => ({ ...ps, search }));
+  };
+
+  const getList = () => {
+    if (state.showProjects) {
+      return (
+        <div>
+          <div className="suites__search-wrapper">
+            <AutoComplete
+              className="suites__search"
+              onSearch={onSearch}
+              value={state.search}
+              onChange={onChangeSearch}
+              dataSource={state.dataSearch}
+              placeholder="Search..."
+              filterOption={(inputValue, option) =>
+                option.props.children
+                  .toUpperCase()
+                  .indexOf(inputValue.toUpperCase()) !== -1
+              }
+            >
+              <Input
+                suffix={<Icon type="search" className="suites__search-icon" />}
+              />
+            </AutoComplete>
+          </div>
+          <DirectoryTree className="suites__tree" multiple defaultExpandAll>
+            <TreeNode title="All tests" key="0-0">
+              <TreeNode title="All Calculators" key="0-0-0" isLeaf />
+              <TreeNode title="Calc - passing" key="0-0-1" isLeaf />
+              <TreeNode title="Test" key="0-0-2" isLeaf />
+              <TreeNode title="Wiki" key="0-0-3" isLeaf />
+            </TreeNode>
+          </DirectoryTree>
+        </div>
+      );
+    } else {
+      return (
+        <div class="suites__project-select-wrapper">
+          <ul className="suites__project-list">
+            <li className="suites__project-item">DotNet</li>
+            <li className="suites__project-item active">Genymotion</li>
+          </ul>
+        </div>
+      );
+    }
+  };
+
   return (
     <div className="suites">
-      <DirectoryTree className="suites__tree" multiple defaultExpandAll>
-        <TreeNode title="All tests" key="0-0">
-          <TreeNode title="All Calculators" key="0-0-0" isLeaf />
-          <TreeNode title="Calc - passing" key="0-0-1" isLeaf />
-          <TreeNode title="Test" key="0-0-2" isLeaf />
-          <TreeNode title="Wiki" key="0-0-3" isLeaf />
-        </TreeNode>
-      </DirectoryTree>
+      <div className="suites__side-bar">
+        <div>
+          <div className="suites__project-wrapper" onClick={onChangeList}>
+            <span className="suites__project">Project</span>
+            <div className="suites__project-row">
+              <span className="suites__project-name">{`GENYMOTION`}</span>
+              <Icon type="down" className="suites__down" />
+            </div>
+          </div>
+          {getList()}
+        </div>
+        <div className="suites__create">
+          <span className="suites__create-text">CREATE NEW</span>
+          <div className="suites__create-btn-wrapper">
+            <a href="/" className="suites__create-btn">
+              <IconNewFolder />
+            </a>
+            <a href="/" className="suites__create-btn">
+              <IconNewDoc />
+            </a>
+          </div>
+        </div>
+      </div>
       <div className="suites__content">
         <div className="suites__space-row">
           <Title className="suites__title" level={2}>
             All calculators #327
           </Title>
-          <Button type="primary" size="large" icon="caret-right">
-            Run now
-          </Button>
+          <div className="suites__btn-wrapper">
+            <Button type="primary" size="large" icon="caret-right">
+              Run now
+            </Button>
+            <Popover
+              placement="bottomRight"
+              content={
+                <div className="suites__btn-dropdown">
+                  <a href="/" className="suites__btn">
+                    <IconEdit className="suites__icon" />
+                    Edit
+                  </a>
+                  <a href="/" className="suites__btn">
+                    <IconRemove className="suites__icon" />
+                    Remove
+                  </a>
+                </div>
+              }
+              trigger="click"
+            >
+              <Button className="suites__button-popover" type="link">
+                <Icon type="ellipsis" style={{ fontSize: "20px" }} />
+              </Button>
+            </Popover>
+          </div>
         </div>
         <div className="suites__tabs-wrapper">
           <Tabs className="suites__tabs" defaultActiveKey="4">

@@ -15,6 +15,7 @@ import {
 const { Text } = Typography;
 const { Header } = Layout;
 
+
 const TheHeader = () => {
   
   const [state, setState] = useState({
@@ -65,7 +66,7 @@ const TheHeader = () => {
             </AutoComplete>
             <Badge count={2}>
               <a href="/" className="the-header__alert-button">
-                <Icon type="bell" theme="twoTone" className="the-header__alert-icon" />
+                <Icon type="bell" className="the-header__alert-icon" />
               </a>
             </Badge>
             <Avatar src="https://i.pravatar.cc/300" />

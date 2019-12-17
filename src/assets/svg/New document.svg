@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="21px" viewBox="0 0 19 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Icons / New document</title>
+    <desc>Created with Sketch.</desc>
+    <g id="MOCKUP-CLOUDBEAT" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-—-CloudBeat-—-Devices-List-" transform="translate(-401.000000, -983.000000)">
+            <g id="EXPAND" transform="translate(181.000000, 60.000000)">
+                <g id="Create-a-new" transform="translate(25.000000, 923.000000)">
+                    <g id="Icons-/-New-document" transform="translate(196.000000, 1.000000)">
+                        <g id="icon" stroke="#1F263E" stroke-width="2">
+                            <polyline id="Path" points="7.21983471 0 7.21983471 4.20746853 11.3451372 4.20746853"></polyline>
+                            <polygon id="Path" stroke-linecap="square" points="7.56416529 0 0 0 0 14.7272727 11.3451372 14.7272727 11.3451372 3.92765035"></polygon>
+                        </g>
+                        <g id="Add" stroke-linecap="round" stroke-linejoin="round" transform="translate(5.641148, 7.665072)">
+                            <polygon id="Path" fill="#FAFAFC" fill-rule="nonzero" points="0.387559809 0.387559809 11.8421053 0.387559809 11.8421053 11.8421053 0.387559809 11.8421053"></polygon>
+                            <path d="M6.58085302,3.73159809 L6.58085302,9.47417686 M9.37722527,6.62492192 L3.73159809,6.62492192" id="Shape" stroke="#1F263E" stroke-width="1.8"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

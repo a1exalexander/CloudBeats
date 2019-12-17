@@ -6,8 +6,13 @@ import {
   Select,
   Collapse,
   Icon,
-  Popover
+  Popover,
+  AutoComplete,
+  Input
 } from "antd";
+import { ReactComponent as IconAlphabet } from "../../assets/svg/Alphabet.svg";
+import { ReactComponent as IconGrid } from "../../assets/svg/Grid.svg";
+import { ReactComponent as IconList } from "../../assets/svg/List.svg";
 
 const { Panel } = Collapse;
 const { Option } = Select;
@@ -16,8 +21,23 @@ const { Option } = Select;
 const Devices = () => {
   const [state, setState] = useState({
     indeterminate: false,
-    checkAll: false
+    checkAll: false,
+    search: "",
+    dataSearch: []
   });
+
+  const onSearch = searchText => {
+    setState(ps => ({
+      ...ps,
+      dataSearch: !searchText
+        ? []
+        : [searchText, searchText.repeat(2), searchText.repeat(3)]
+    }));
+  };
+  
+  const onChangeSearch = search => {
+    setState(ps => ({ ...ps, search }));
+  };
 
   const onCheckAllChange = e => {
     setState(ps => ({ ...ps, checkAll: e.target.checked }));
@@ -130,6 +150,7 @@ const Devices = () => {
             className="devices__select"
             placeholder="OS"
             style={{ width: 65 }}
+            suffixIcon={<Icon type="caret-down"className="devices__search-icon" />}
           >
             <Option value="1">Option 1</Option>
             <Option value="2">Option 2</Option>
@@ -140,6 +161,7 @@ const Devices = () => {
             className="devices__select"
             placeholder="Version"
             style={{ width: 100 }}
+            suffixIcon={<Icon type="caret-down"className="devices__search-icon" />}
           >
             <Option value="1">Option 1</Option>
             <Option value="2">Option 2</Option>
@@ -150,6 +172,7 @@ const Devices = () => {
             className="devices__select"
             placeholder="Status"
             style={{ width: 100 }}
+            suffixIcon={<Icon type="caret-down"className="devices__search-icon" />}
           >
             <Option value="1">Option 1</Option>
             <Option value="2">Option 2</Option>
@@ -160,6 +183,7 @@ const Devices = () => {
             className="devices__select"
             placeholder="Device name"
             style={{ width: 130 }}
+            suffixIcon={<Icon type="caret-down"className="devices__search-icon" />}
           >
             <Option value="1">Option 1</Option>
             <Option value="2">Option 2</Option>
@@ -170,6 +194,7 @@ const Devices = () => {
             className="devices__select"
             placeholder="Location"
             style={{ width: 100 }}
+            suffixIcon={<Icon type="caret-down"className="devices__search-icon" />}
           >
             <Option value="1">Option 1</Option>
             <Option value="2">Option 2</Option>
@@ -177,8 +202,42 @@ const Devices = () => {
             <Option value="4">Option 4</Option>
           </Select>
         </div>
+        <a href="/" className="devices__clear-btn">Clear all filters</a>
       </div>
       <Divider />
+      <div className="devices__search-row">
+        <div className="devices__search-wrapper">
+          <p className="devices__search-count">RESSOURCES (36)</p>
+          <AutoComplete
+              className="devices__search"
+              onSearch={onSearch}
+              value={state.search}
+              onChange={onChangeSearch}
+              dataSource={state.dataSearch}
+              placeholder="Search..."
+              filterOption={(inputValue, option) =>
+                option.props.children
+                  .toUpperCase()
+                  .indexOf(inputValue.toUpperCase()) !== -1
+              }
+            >
+              <Input
+                suffix={<Icon type="search" className="devices__search-icon" />}
+              />
+            </AutoComplete>
+        </div>
+        <div className="devices__icons-wrapper">
+          <a href="/" className="devices__filter">
+            <IconAlphabet />
+          </a>
+          <a href="/" className="devices__filter">
+            <IconGrid />
+          </a>
+          <a href="/" className="devices__filter">
+            <IconList />
+          </a>
+        </div>
+      </div>
       <Collapse className="devices__collapse" bordered={false}>
         {list}
       </Collapse>
