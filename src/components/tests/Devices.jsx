@@ -13,6 +13,7 @@ import {
 import { ReactComponent as IconAlphabet } from "../../assets/svg/Alphabet.svg";
 import { ReactComponent as IconGrid } from "../../assets/svg/Grid.svg";
 import { ReactComponent as IconList } from "../../assets/svg/List.svg";
+import { ReactComponent as IconActions } from "../../assets/svg/Actions.svg";
 
 const { Panel } = Collapse;
 const { Option } = Select;
@@ -44,11 +45,12 @@ const Devices = () => {
   };
 
   const customPanelStyle = {
-    background: "#FAFBFC",
-    borderRadius: 4,
+    background: "#FAFAFC",
+    borderRadius: 3,
     marginBottom: 12,
     border: 0,
-    overflow: "hidden"
+    overflow: "hidden",
+    boxShadow: '0 1px 2px -1px rgba(31,38,62,0.14)'
   };
 
   const content = (
@@ -80,13 +82,8 @@ const Devices = () => {
         </li>
       </ul>
       <Popover placement="leftTop" title={`Item ${el}`} content={content} trigger="click">
-        <Icon
-          type="ellipsis"
+        <IconActions
           className='devices__extra'
-          onClick={event => {
-            // If you don't want click extra trigger collapse, you can prevent this:
-            event.stopPropagation();
-          }}
         />
       </Popover>
       
@@ -135,8 +132,6 @@ const Devices = () => {
     <div className="devices">
       <div className="devices__row">
         <div className="devices__toolbar">
-          <Button type="link" icon="redo" />
-          <Divider type="vertical" />
           <Checkbox
             indeterminate={state.indeterminate}
             onChange={onCheckAllChange}

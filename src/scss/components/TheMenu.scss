@@ -9,6 +9,10 @@
       background-color: #1f263e;
       box-shadow: none;
     }
+    & .ant-menu-submenu {
+      font-weight: 700;
+      color: $N0;
+    }
     & .ant-menu-submenu-open {
       color: #2bb1e2;
       .the-menu__list-icon {
@@ -45,8 +49,16 @@
       background: #29314b;
       border-left-color: #3dc0ef;
       color: #2bb1e2;
+      font-weight: 700;
       .the-menu__list-icon {
         fill: #2bb1e2;
+      }
+    }
+    & .ant-menu-item {
+      font-weight: 400;
+      &:hover {
+        color: #2bb1e2;
+        font-weight: 700;
       }
     }
     &
@@ -61,14 +73,21 @@
       background: #2bb1e2;
     }
   }
-  .ant-menu-submenu-selected {
-    .the-menu__list-icon {
-      fill: $N0;
-    }
-  }
+  
   .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
     text-overflow: ellipsis;
+    
   }
+  .ant-menu-submenu-title {
+    font-size: 16px;
+  }
+  & .ant-menu-submenu-open {
+    color: #2bb1e2;
+    .the-menu__list-icon {
+      fill: #2bb1e2;
+    }
+  }
+  
 
   &__logo-wrapper {
     @include text($H60, 500, $N0);
@@ -85,9 +104,11 @@
     }
   }
   &__list-icon {
-    fill: rgba(255, 255, 255, 0.65);
+    fill: $N0;
     width: 20px;
-    margin-right: 16px;
+    margin-right: 8px;
     transition: fill 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    top: 3px;
   }
 }

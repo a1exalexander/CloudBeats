@@ -6,7 +6,7 @@
     flex: 1 1 90%;
     display: block;
     max-width: calc(100% - 216px);
-    padding: 24px;
+    padding: 26px 40px;
     background-color: $N0;
     overflow: auto;
   }
@@ -15,6 +15,7 @@
   }
   &__title.ant-typography {
     margin-bottom: 0;
+    font-weight: 500;
   }
   &__tree {
     padding: 12px 48px 12px 12px;
@@ -28,6 +29,7 @@
     @include flex-col(space-between, stretch);
     min-width: 237px;
   }
+ 
   &__search-wrapper {
     padding: 20px 20px 0;
   }
@@ -41,13 +43,18 @@
     color: $N910;
     @include flex-row(flex-start, center);
   }
+  &__btn-wrapper {
+    @include flex-row(flex-start, center);
+  }
   &__button-popover {
     height: 40px;
-    border: 3px solid transparent;
     background-color: $A150;
     color: $N0;
-    &:hover {
-      color: $N0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    .suites &.ant-btn.ant-btn-lg {
+      border-radius: 0 4px 4px 0;
     }
   }
   &__btn:not(:last-child) {
@@ -78,7 +85,7 @@
     color: $N910;
   }
   &__create {
-    @include flex-row(space-between, flex-start);
+    @include flex-row(space-between, flex-end);
     padding: 20px;
   }
   &__create-btn {
@@ -87,6 +94,11 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+  &__create-text {
+    font-weight: 500;
+    font-size: 16px;
+    color: $N910;
   }
   &__create-btn-wrapper {
     @include flex-row(flex-start, center);
@@ -121,9 +133,6 @@
     background-color: $A150;
     color: $N0;
   }
-  & .ant-btn {
-    border-radius: 0 4px 4px 0;
-  }
   & .ant-input {
     border: none;
     padding-left: 30px;
@@ -136,7 +145,7 @@
   }
   .ant-select-selection__placeholder,
   .ant-select-search__field__placeholder {
-    color: $N910;
+    color: rgba(0, 0, 0, 0.65);
     font-weight: 400;
   }
   & .ant-input-affix-wrapper .ant-input-suffix {
@@ -200,5 +209,9 @@
   }
   & .ant-tabs-nav .ant-tabs-tab {
     font-weight: 500;
+    padding: 12px 0;
+  }
+  & .ant-tabs-bar {
+    margin-bottom: 24px;
   }
 }

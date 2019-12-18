@@ -14,6 +14,10 @@ import { ReactComponent as IconEdit } from "../../assets/svg/Edit.svg";
 import { ReactComponent as IconRemove } from "../../assets/svg/Remove.svg";
 import { ReactComponent as IconNewDoc } from "../../assets/svg/New document.svg";
 import { ReactComponent as IconNewFolder } from "../../assets/svg/New folder.svg";
+import { ReactComponent as IconExpand } from "../../assets/svg/Expand.svg";
+import { ReactComponent as IconFolder } from "../../assets/svg/Folder.svg";
+import { ReactComponent as IconDocument } from "../../assets/svg/Document.svg";
+import { ReactComponent as IconActions } from "../../assets/svg/Actions.svg";
 
 const { TabPane } = Tabs;
 const { Title } = Typography;
@@ -70,11 +74,11 @@ const Suites = () => {
             </AutoComplete>
           </div>
           <DirectoryTree className="suites__tree" multiple defaultExpandAll>
-            <TreeNode title="All tests" key="0-0">
-              <TreeNode title="All Calculators" key="0-0-0" isLeaf />
-              <TreeNode title="Calc - passing" key="0-0-1" isLeaf />
-              <TreeNode title="Test" key="0-0-2" isLeaf />
-              <TreeNode title="Wiki" key="0-0-3" isLeaf />
+            <TreeNode title="All tests (4)" key="0-0" icon={<IconFolder/>}>
+              <TreeNode title="All Calculators" key="0-0-0" isLeaf icon={<IconDocument />}/>
+              <TreeNode title="Calc - passing" key="0-0-1" isLeaf icon={<IconDocument />}/>
+              <TreeNode title="Test" key="0-0-2" isLeaf icon={<IconDocument />}/>
+              <TreeNode title="Wiki" key="0-0-3" isLeaf icon={<IconDocument />}/>
             </TreeNode>
           </DirectoryTree>
         </div>
@@ -99,7 +103,7 @@ const Suites = () => {
             <span className="suites__project">Project</span>
             <div className="suites__project-row">
               <span className="suites__project-name">{`GENYMOTION`}</span>
-              <Icon type="down" className="suites__down" />
+              <IconExpand className="suites__down" />
             </div>
           </div>
           {getList()}
@@ -141,8 +145,8 @@ const Suites = () => {
               }
               trigger="click"
             >
-              <Button className="suites__button-popover" type="link">
-                <Icon type="ellipsis" style={{ fontSize: "20px" }} />
+              <Button className="suites__button-popover" type="link" size="large">
+                <IconActions type="ellipsis" style={{ fill: "#fff" }} />
               </Button>
             </Popover>
           </div>

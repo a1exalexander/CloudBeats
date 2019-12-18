@@ -9,7 +9,7 @@
   }
   &__select {
     &:not(:last-child) {
-      margin-right: 32px;
+      margin-right: 24px;
     }
   }
   &__toolbar {
@@ -53,7 +53,7 @@
     font-weight: 400;
   }
   &__options {
-    padding: 0 0 0 24px;
+    padding: 0 0 0 8px;
     flex: 1 1;
     list-style: none;
     @include flex-row(space-between, center);
@@ -103,6 +103,11 @@
     padding: 0 20px;
     font-weight: 500;
   }
+  & .devices__search {
+    .ant-select-selection {
+      background-color: #FAFAFC;
+    }
+  }
   &__search-row {
     @include flex-row(space-between, center);
     padding-bottom: 26px;
@@ -137,7 +142,5 @@
   .ant-select-arrow {
     color: $N910;
   }
-  .ant-select-selection {
-    background-color: #eef0f4;
-  }
+  
 }
