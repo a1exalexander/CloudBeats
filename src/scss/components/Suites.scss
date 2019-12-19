@@ -27,7 +27,8 @@
     border-right: 1px solid #e3e4e8;
     padding-top: 18px;
     @include flex-col(space-between, stretch);
-    min-width: 237px;
+    min-width: 240px;
+    max-width: 240px;
   }
  
   &__search-wrapper {

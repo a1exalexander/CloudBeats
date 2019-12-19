@@ -81,7 +81,7 @@ const Devices = () => {
           <span>Online</span>
         </li>
       </ul>
-      <Popover placement="leftTop" title={`Item ${el}`} content={content} trigger="click">
+      <Popover placement="leftTop" title={`Item ${el}`} content={content} trigger="hover">
         <IconActions
           className='devices__extra'
         />

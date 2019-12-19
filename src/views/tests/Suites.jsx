@@ -85,7 +85,7 @@ const Suites = () => {
       );
     } else {
       return (
-        <div class="suites__project-select-wrapper">
+        <div className="suites__project-select-wrapper">
           <ul className="suites__project-list">
             <li className="suites__project-item">DotNet</li>
             <li className="suites__project-item active">Genymotion</li>

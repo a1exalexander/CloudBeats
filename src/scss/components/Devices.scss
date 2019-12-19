@@ -13,7 +13,7 @@
     }
   }
   &__toolbar {
-    margin-right: 32px;
+    margin-right: 16px;
   }
   &__collapse {
     // .ant-collapse-item {
@@ -67,7 +67,8 @@
     @include flex-row(space-between, center);
   }
   &__checkbox {
-    margin-right: 18px;
+    margin-right: 35px;
+    margin-left: 15px;
   }
   &__icon-device {
     font-size: 22px;

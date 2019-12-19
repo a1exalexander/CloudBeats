@@ -10,7 +10,7 @@
       box-shadow: none;
     }
     & .ant-menu-submenu {
-      font-weight: 700;
+      font-weight: 500;
       color: $N0;
     }
     & .ant-menu-submenu-open {
@@ -88,6 +88,9 @@
     }
   }
   
+  .ant-menu-submenu-vertical > .ant-menu-submenu-title > span > span {
+    display: none;
+  }
 
   &__logo-wrapper {
     @include text($H60, 500, $N0);
