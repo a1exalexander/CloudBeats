@@ -36,7 +36,7 @@
   &__alert-button {
     // display: inline-block;
     color: $N910;
-    font-size: 24px;
+    font-size: 16px;
   }
   .ant-breadcrumb > span:last-child a {
     font-size: 13px;
@@ -49,6 +49,24 @@
   }
   & .ant-input {
     border-color: transparent;
+  }
+  & .ant-badge-count {
+    $size: 16px;
+    min-width: $size;
+    height: $size;
+    font-size: 10px;
+    padding: 0;
+    border-radius: 50%;
+  }
+  .ant-scroll-number-only > p {
+    height: 16px;
+  }
+  .ant-scroll-number-only {
+    height: 16px;
+  }
+  .current {
+    position: relative;
+    bottom: 1px;
   }
 }
 

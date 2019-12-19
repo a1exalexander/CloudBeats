@@ -62,6 +62,14 @@
   &__option {
     font-size: 16px;
     color: #1f263e;
+    &:first-child {
+      flex-basis: 25%;
+      min-width: 25%;
+    }
+    &:nth-child(2) {
+      flex-basis: 10%;
+      min-width: 10%;
+    }
   }
   &__item {
     @include flex-row(space-between, center);
