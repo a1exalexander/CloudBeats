@@ -1,0 +1,101 @@
+.result-test {
+  &__title {
+    margin-bottom: 20px;
+    color: $N910;
+  }
+  &__devices {
+    @include flex-col(flex-start, stretch);
+    margin-bottom: 30px;
+    list-style: none;
+    padding: 0;
+  }
+  &__device {
+    @include flex-row(flex-start, center);
+    margin-bottom: 12px;
+    background-color: $N11;
+    padding: 16px 32px;
+    border-radius: 4px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &--case {
+      justify-content: space-between;
+    }
+  }
+  &__error-icon {
+    @include svg(24px, $R450);
+    margin-right: 6px;
+  }
+  &__ok-icon {
+    @include svg(24px, $G250);
+    margin-right: 6px;
+  }
+  &__name {
+    color: $A150;
+    flex-basis: 40%;
+    text-align: left;
+    &--case {
+      padding: 0;
+      flex-basis: initial;
+    }
+  }
+  &__system {
+    @include flex-row(flex-start, center);
+    flex-basis: 40%;
+    @include text($H50, 400, $N910);
+  }
+  &__android-icon {
+    margin-right: 6px;
+    position: relative;
+    bottom: 1px;
+  }
+  &__result {
+    @include text($H50, 400, $G250);
+    &.error {
+      color: $R450;
+    }
+  }
+  &__statistic {
+    text-align: center;
+    @include flex-row(center, center);
+  }
+  &__value {
+    @include text($H50, 400, $N910);
+    margin-right: 32px;
+    &.green {
+      span {
+        color: $G250;
+      }
+    }
+    &.red {
+      span {
+        color: $R450;
+      }
+    }
+  }
+  &__progress {
+    max-width: 25%;
+  }
+  .ant-progress-inner {
+    background-color: $G250;
+  }
+  &__row-chart {
+    @include flex-row(stretch, stretch);
+    margin-bottom: 24px;
+  }
+  &__col-chart {
+    @include flex-col;
+    margin-right: 12px;
+    flex-basis: 33%;
+    max-width: 33%;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__chart {
+    background-color: $N11;
+    width: 100%;
+    padding: 24px;
+    position: relative;
+  }
+}

@@ -10,6 +10,7 @@ import {
   Popover
 } from "antd";
 import Devices from "../../components/tests/Devices";
+import Results from "../../components/tests/Results";
 import { ReactComponent as IconEdit } from "../../assets/svg/Edit.svg";
 import { ReactComponent as IconRemove } from "../../assets/svg/Remove.svg";
 import { ReactComponent as IconNewDoc } from "../../assets/svg/New document.svg";
@@ -152,9 +153,9 @@ const Suites = () => {
           </div>
         </div>
         <div className="suites__tabs-wrapper">
-          <Tabs className="suites__tabs" defaultActiveKey="4">
+          <Tabs className="suites__tabs" defaultActiveKey="1">
             <TabPane tab="Results" key="1">
-              Results
+              <Results />
             </TabPane>
             <TabPane tab="Settings" key="2">
               Settings

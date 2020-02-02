@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Icons / Interface / Code</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24" rx="3"></rect>
+        <filter x="-8.3%" y="-4.2%" width="116.7%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.121568627   0 0 0 0 0.149019608   0 0 0 0 0.243137255  0 0 0 0.14 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Icons-/-Interface-/-Code" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle" fill="black" fill-opacity="1">
+            <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+        </g>
+        <rect id="Rectangle" stroke="#94A2B5" stroke-width="0.5" fill="#FFFFFF" x="0.25" y="0.25" width="23.5" height="23.5" rx="3"></rect>
+        <path d="M7.77085284,7.26662057 L11.1213561,10.8024685 C11.6262146,11.335255 11.6262146,12.1980783 11.1213561,12.7308648 L7.77085284,16.2667128 C7.43399329,16.6222069 6.8895042,16.6222069 6.55264466,16.2667128 C6.21578511,15.9121279 6.21578511,15.3357001 6.55264466,14.9811152 L9.59902663,11.7671213 L6.55264466,8.55221814 C6.21578511,8.19672405 6.21578511,7.62211467 6.55264466,7.26662057 C6.8895042,6.91112648 7.43399329,6.91112648 7.77085284,7.26662057 Z M18,14.5 C18.5522847,14.5 19,14.9477153 19,15.5 C19,16.0522847 18.5522847,16.5 18,16.5 L14,16.5 C13.4477153,16.5 13,16.0522847 13,15.5 C13,14.9477153 13.4477153,14.5 14,14.5 L18,14.5 Z" id="Combined-Shape" fill="#4D5265"></path>
+    </g>
+</svg>

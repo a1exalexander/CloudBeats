@@ -1,0 +1,46 @@
+.results {
+  &__icon {
+    @include svg(16px, $A150);
+    margin-right: 8px;
+    position: relative;
+    top: 1px;
+  }
+  &__head-btn {
+    @include flex-row(center, flex-start);
+    color: $A150;
+    margin-right: 25px;
+    padding: 0;
+    &--last {
+      margin-right: 42px;
+    }
+  }
+  &__row {
+    @include flex-row(space-between, center);
+  }
+  &__wrapper {
+    @include flex-row(flex-start, center);
+  }
+  &__title {
+    margin-bottom: 0;
+  }
+  &__carousel {
+    height: 100%;
+  }
+  &__carousel-nav {
+    @include flex-row(flex-start, center);
+    margin-right: 18px;
+  }
+  &__icon-nav {
+    @include svg(24px, $A150);
+  }
+  &__arrow {
+    @include flex-row(flex-start, flex-end);
+  }
+  &__slide-number {
+    @include text($H40, 400, $N910);
+  }
+  &__extra {
+    cursor: pointer;
+    margin-right: 24px;
+  }
+}

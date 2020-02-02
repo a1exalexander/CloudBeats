@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Icons / Interface / Plus</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24" rx="3"></rect>
+        <filter x="-8.3%" y="-4.2%" width="116.7%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.121568627   0 0 0 0 0.149019608   0 0 0 0 0.243137255  0 0 0 0.14 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Icons-/-Interface-/-Plus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle" fill="black" fill-opacity="1">
+            <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+        </g>
+        <rect id="Rectangle" stroke="#94A2B5" stroke-width="0.5" fill="#FFFFFF" x="0.25" y="0.25" width="23.5" height="23.5" rx="3"></rect>
+        <path d="M16.9285714,10.9285714 L13.2857143,10.9285714 C13.1673758,10.9285714 13.0714286,10.8326242 13.0714286,10.7142857 L13.0714286,7.07142857 C13.0714286,6.47973632 12.5916923,6 12,6 C11.4083078,6 10.9285714,6.47973632 10.9285714,7.07142857 L10.9285714,10.7142857 C10.9285714,10.8326242 10.8326242,10.9285714 10.7142857,10.9285714 L7.07142857,10.9285714 C6.47973632,10.9285714 6,11.4083078 6,12 C6,12.5916923 6.47973632,13.0714286 7.07142857,13.0714286 L10.7142857,13.0714286 C10.8326242,13.0714286 10.9285714,13.1673758 10.9285714,13.2857143 L10.9285714,16.9285714 C10.9285714,17.5202637 11.4083078,18 12,18 C12.5916923,18 13.0714286,17.5202637 13.0714286,16.9285714 L13.0714286,13.2857143 C13.0714286,13.1673758 13.1673758,13.0714286 13.2857143,13.0714286 L16.9285714,13.0714286 C17.5202637,13.0714286 18,12.5916923 18,12 C18,11.4083078 17.5202637,10.9285714 16.9285714,10.9285714 Z" id="Path" fill="#4D5265"></path>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Icons / Interface / Folder</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons-/-Interface-/-Folder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Icons-/-Folder" transform="translate(4.000000, 5.000000)" stroke="#1F263E">
+            <g id="group-4">
+                <polygon id="Path" fill-opacity="0.127321897" fill="#1F263E" fill-rule="nonzero" points="1.74 14.26 13.565 14.26 15.652 5.217 3.826 5.217"></polygon>
+                <polyline id="Path" points="12.87 2.435 6.609 2.435 5.217 0.348 0.347 0.348 0.347 11.478"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Icons / Interface / New folder</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons-/-Interface-/-New-folder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(3.000000, 3.000000)">
+            <path d="M13.8647747,13.3692632 L0.989962105,13.3692632 C0.443221132,13.3692632 1.03916875e-13,12.926042 1.03916875e-13,12.3793011 L1.03916875e-13,9.76996262e-15 L5.44638316,9.76996262e-15 L6.93185684,1.98098526 L14.8547368,1.98098526 L14.8547368,12.3793011 C14.8547368,12.926042 14.4115157,13.3692632 13.8647747,13.3692632 Z" id="Path" stroke="#1F263E" stroke-width="2" stroke-linecap="square"></path>
+            <polygon id="Path" fill="#FFFFFF" points="8.70947368 8.26736842 20.4694737 8.26736842 20.4694737 20.0273684 8.70947368 20.0273684"></polygon>
+            <path d="M15.0679214,11.7005811 L15.0679214,17.5962953 M17.9388636,14.6710602 L12.1426863,14.6710602" id="Shape" stroke="#1F263E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

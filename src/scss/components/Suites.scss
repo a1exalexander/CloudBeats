@@ -129,8 +129,8 @@
     border-radius: 4px 0 0 4px;
     margin-right: 1px;
   }
-  & .ant-btn-link:hover,
-  .ant-btn-link:focus {
+  &__button-popover.ant-btn-link:hover,
+  &__button-popover.ant-btn-link:focus {
     background-color: $A150;
     color: $N0;
   }
