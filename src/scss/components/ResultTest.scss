@@ -75,10 +75,22 @@
   }
   &__progress {
     max-width: 25%;
+    .ant-progress-inner {
+      background-color: $G250;
+    }
+    .ant-progress-text {
+      color: $R450;
+    }
+    &.failed {
+      .ant-progress-inner {
+        background-color: $R450;
+      }
+      .ant-progress-text {
+        color: $G250;
+      }
+    }
   }
-  .ant-progress-inner {
-    background-color: $G250;
-  }
+
   &__row-chart {
     @include flex-row(stretch, stretch);
     margin-bottom: 24px;

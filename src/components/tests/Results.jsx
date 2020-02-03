@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Button, Divider, Carousel, Popover } from "antd";
 import { ReactComponent as IconLeft } from "../../assets/svg/Interface/Long arrow left.svg";
 import { ReactComponent as IconFile } from "../../assets/svg/Interface/File 2.svg";
@@ -10,7 +10,7 @@ import ResultTest from "./ResultTest";
 
 const Results = () => {
   const [slider, setSlider] = useState(null);
-
+  const [counter, setCounter] = useState(0);
   const content = (
     <div>
       <p>Content</p>
@@ -18,21 +18,21 @@ const Results = () => {
     </div>
   );
 
-  const list = [1, 2, 3].map(() => {
-    return (
-      <ResultTest />
-    )
-  })
+  const list = [1, 2, 3].map(el => {
+    return <ResultTest key={el} />;
+  });
+
+  const totalSlides = useMemo(() => list.length, [list]);
+
+  useEffect(() => {
+    if (totalSlides) setCounter(1);
+  }, [totalSlides]);
 
   return (
     <div className="results">
       <div className="results__row">
         <div className="results__wrapper">
-          <Button
-            type="link"
-            className="results__head-btn"
-            onClick={() => console.log(slider)}
-          >
+          <Button type="link" className="results__head-btn">
             <IconLeft className="results__icon" />
             Back
           </Button>
@@ -55,11 +55,21 @@ const Results = () => {
             PDF
           </Button>
           <div className="results__carousel-nav">
-            <Button type="link" className="results__arrow" onClick={() => slider.slick.slickPrev()}>
+            <Button
+              type="link"
+              className="results__arrow"
+              onClick={() => slider.slick.slickPrev()}
+            >
               <IconLeftExpand className="results__icon-nav" />
             </Button>
-            <span className="results__slide-number">{`1 on 23`}</span>
-            <Button type="link" className="results__arrow results__arrow--last" onClick={() => slider.slick.slickNext()}>
+            <span className="results__slide-number">
+              {counter} on {totalSlides}
+            </span>
+            <Button
+              type="link"
+              className="results__arrow results__arrow--last"
+              onClick={() => slider.slick.slickNext()}
+            >
               <IconRightExpand className="results__icon-nav" />
             </Button>
           </div>
@@ -74,7 +84,11 @@ const Results = () => {
         </div>
       </div>
       <Divider />
-      <Carousel ref={node => setSlider(node)} className="results__carousel">
+      <Carousel
+        afterChange={e => setCounter(e + 1)}
+        ref={node => setSlider(node)}
+        className="results__carousel"
+      >
         {list}
       </Carousel>
     </div>
