@@ -7,6 +7,7 @@ import { ReactComponent as IconLeftExpand } from "../../assets/svg/Interface/Exp
 import { ReactComponent as IconRightExpand } from "../../assets/svg/Interface/Expand right.svg";
 import { ReactComponent as IconActions } from "../../assets/svg/Actions.svg";
 import ResultTest from "./ResultTest";
+import CloudBadge from "../common/CloudBadge";
 
 const Results = () => {
   const [slider, setSlider] = useState(null);
@@ -37,6 +38,7 @@ const Results = () => {
             Back
           </Button>
           <h3 className="results__title">Test #160914 - JUL 15, 15h30</h3>
+          <CloudBadge>passed</CloudBadge>
         </div>
         <div className="results__wrapper">
           <Button type="link" className="results__head-btn">

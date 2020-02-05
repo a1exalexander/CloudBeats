@@ -1,0 +1,139 @@
+.drawer-content-steps {
+  &__head {
+    @include flex-row(space-between, center);
+    padding: 0 40px;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    @include flex-row(flex-start, center);
+    background-color: transparent;
+    outline: none;
+    padding: 0;
+    color: $N50;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  &__up {
+    @include svg(17px, $N50);
+    margin-left: 8px;
+  }
+  &__tree {
+    padding: 0;
+  }
+  &__tree-item {
+    @include flex-row(flex-start, center);
+    padding: 14px 50px 14px 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    flex-wrap: wrap;
+    &.child {
+      background-color: #fff;
+    }
+    &.third {
+      padding-left: 70px;
+    }
+  }
+  &__wrapper {
+    @include flex-row(flex-start, center);
+    position: absolute;
+    right: 50px;
+    top: 16px;
+  }
+  &__timer-first {
+    margin-right: 8px;
+    @include svg(16px, $N910);
+  }
+  &__expand {
+    @include svg(24px, $N910);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    &.expanded {
+      transform: rotate(90deg) translateX(-50%);
+    }
+  }
+  &__result-icon {
+    @include svg(24px, $G250);
+    margin-right: 8px;
+    &--error {
+      fill: $R450;
+    }
+  }
+  &__info {
+    color: $N910;
+  }
+  &__tree-expand-last {
+    position: absolute;
+    right: 16px;
+    top: 19px;
+    @include svg(16px);
+    cursor: pointer;
+  }
+  &__expanded-block {
+    flex-basis: 100%;
+    @include flex-row(flex-end, center);
+    padding: 10px 0;
+    &--error {
+      justify-content: space-between;
+      margin-bottom: 12px;
+      .ant-radio-group {
+        .ant-radio-button-wrapper {
+          color: $N00;
+          text-align: center;
+        }
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+          color: $A150;
+          border-color: $A150;
+          box-shadow: -1px 0 0 0 $A150;
+        }
+      }
+    }
+  }
+  &__wrapper-expand {
+    @include flex-row(flex-start, center);
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__time-row {
+    @include flex-row(flex-start, center);
+  }
+  &__error-text {
+    background-color: #FAFAFC;
+    padding: 13px 40px 13px 20px;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      .drawer-content-steps__copy-icon {
+        display: initial;
+      }
+    }
+  }
+  &__error-message {
+    font-size: 14px;
+    color: $N910;
+    line-height: 1.6;
+  }
+  &__copy-icon {
+    @include svg(18px, #94A2B5);
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    display: none;
+    cursor: pointer;
+    &:hover {
+      fill: darken(#94A2B5, 10%);
+    }
+  }
+  &__modal {
+    text-align: center;
+  }
+  &__modal-message {
+    text-align: left;
+    margin-bottom: 60px;
+  }
+}

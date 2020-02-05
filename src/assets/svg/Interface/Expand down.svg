@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
     <title>Icons / Interface / Expand down</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <path d="M8.99497475,10.8828427 L13.587868,6.28994949 C13.9744673,5.90335017 14.6012686,5.90335017 14.987868,6.28994949 C15.3744673,6.67654882 15.3744673,7.30335017 14.987868,7.68994949 L11.087868,11.5899495 L14.987868,15.4899495 C15.3744673,15.8765488 15.3744673,16.5033502 14.987868,16.8899495 C14.6012686,17.2765488 13.9744673,17.2765488 13.587868,16.8899495 L8.99497475,12.2970563 C8.60445046,11.906532 8.60445046,11.273367 8.99497475,10.8828427 L8.99497475,10.8828427 Z" id="path-1"></path>
+        <path d="M8.99497475,10.8828427 L13.587868,6.28994949 C13.9744673,5.90335017 14.6012686,5.90335017 14.987868,6.28994949 C15.3744673,6.67654882 15.3744673,7.30335017 14.987868,7.68994949 L11.087868,11.5899495 L14.987868,15.4899495 C15.3744673,15.8765488 15.3744673,16.5033502 14.987868,16.8899495 C14.6012686,17.2765488 13.9744673,17.2765488 13.587868,16.8899495 L8.99497475,12.2970563 C8.60445046,11.906532 8.60445046,11.273367 8.99497475,10.8828427 L8.99497475,10.8828427 Z" id="path-1down"></path>
     </defs>
-    <g id="Icons-/-Interface-/-Expand-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <mask id="mask-2" fill="white">
-            <use xlink:href="#path-1"></use>
+    <g id="Icons-/-Interface-/-Expand-down" stroke="none" stroke-width="1">
+        <mask id="mask-2down">
+            <use xlink:href="#path-1down"></use>
         </mask>
-        <use id="Shape" fill="#3DC0EF" transform="translate(11.989949, 11.589949) scale(1, -1) rotate(90.000000) translate(-11.989949, -11.589949) " xlink:href="#path-1"></use>
+        <use id="Shapedown" transform="translate(11.989949, 11.589949) scale(1, -1) rotate(90.000000) translate(-11.989949, -11.589949) " xlink:href="#path-1down"></use>
     </g>
 </svg>

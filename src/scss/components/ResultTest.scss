@@ -15,6 +15,7 @@
     background-color: $N11;
     padding: 16px 32px;
     border-radius: 4px;
+    cursor: pointer;
     &:last-child {
       margin-bottom: 0;
     }
@@ -109,5 +110,26 @@
     width: 100%;
     padding: 24px;
     position: relative;
+  }
+  &__drawer-expand {
+    @include flex-row(center, center);
+    @include size(30px);
+    position: absolute;
+    right: 60px;
+    top: 27px;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    svg {
+      @include svg(16px, rgba(0, 0, 0, 0.45));
+    }
+    &:hover {
+      svg {
+        fill: rgba(0, 0, 0, 0.75);
+      }
+    }
   }
 }

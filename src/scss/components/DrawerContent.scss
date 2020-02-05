@@ -1,0 +1,51 @@
+.drawer-content {
+  &__header {
+    padding: 0 40px;
+  }
+  &__title {
+    margin-bottom: 0;
+    margin-right: 10px;
+    font-size: $H240;
+    color: $N910;
+  }
+  &__header-wrapper {
+    @include flex-row(flex-start, center);
+    margin-bottom: 20px;
+  }
+  &__device {
+    margin-right: 42px;
+    margin-bottom: 0;
+    span {
+      &:first-child {
+        color: $N00;
+        margin-right: 4px;
+      }
+      &:last-child {
+        color: $N200;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__radios {
+    padding: 0 40px;
+    margin-bottom: 32px;
+    .ant-radio-group {
+      width: 100%;
+      display: flex;
+      .ant-radio-button-wrapper {
+        flex-basis: 25%;
+        color: $N00;
+        text-align: center;
+        background-color: #FAFAFC;
+      }
+      .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+        color: $A150;
+        border-color: $A150;
+        box-shadow: -1px 0 0 0 $A150;
+        background-color: rgba($A150, .1);
+      }
+    }
+  }
+}

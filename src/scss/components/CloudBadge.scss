@@ -1,0 +1,36 @@
+$names: "green", "red";
+$bg-default: (
+  "green": $G250,
+  "red": $R450
+);
+
+$styles: cloud-badge;
+.#{$styles} {
+  background-color: $B50;
+  max-width: fit-content;
+  max-height: 20px;
+  border-radius: 2px;
+  padding: 3px 7px 2px;
+  @include flex-row(center, center);
+  display: inline-flex;
+  box-shadow: $SH2;
+  cursor: default;
+  @include transition(background-color);
+  transition-duration: 0.5s;
+  pointer-events: all;
+  color: $N0;
+  &__text {
+    font-size: $H9;
+    font-weight: 500;
+    pointer-events: none;
+    text-transform: uppercase;
+  }
+  @each $name in $names {
+    &.#{$name} {
+      &:active {
+        background-color: darken(map-get($bg-default, $name), 2%);
+      }
+      background-color: map-get($bg-default, $name);
+    }
+  }
+}

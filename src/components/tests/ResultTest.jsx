@@ -1,18 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { ReactComponent as IconError } from "../../assets/svg/Interface/Close in circle.svg";
 import { ReactComponent as IconOk } from "../../assets/svg/Interface/Check in circle.svg";
 import { ReactComponent as IconAndroid } from "../../assets/svg/Interface/Android.svg";
-import { Button, Progress } from "antd";
+import { ReactComponent as IconFullEnter } from "../../assets/svg/Interface/Full screen/Enter.svg";
+import { ReactComponent as IconFullLeave } from "../../assets/svg/Interface/Full screen/Exit.svg";
+import { Button, Progress, Drawer } from "antd";
 import DoughnutChart from "./DoughnutChart";
+import DrawerContent from './DrawerContent';
 
 const ResultTest = () => {
+  const [visibility, setVisibility] = useState(false);
+  const [width, setWidth] = useState(720);
+
+  const showDrawer = () => {
+    setVisibility(true);
+  };
+
+  const onClose = () => {
+    setVisibility(false);
+    setWidth(720);
+  };
+
+  const changeWidth = () => {
+    width === 720 ? setWidth('70%') : setWidth(720);
+  };
+
+  const drawerIcon = width === 720 ? <IconFullEnter /> : <IconFullLeave />
+
   const device = [1, 2, 3].map((el, idx) => {
     return (
-      <li key={el} className="result-test__device">
+      <li key={el} className="result-test__device" onClick={showDrawer}>
         {idx % 2 === 0 ? (
-          <IconOk class="result-test__ok-icon" />
+          <IconOk className="result-test__ok-icon" />
         ) : (
-          <IconError class="result-test__error-icon" />
+          <IconError className="result-test__error-icon" />
         )}
         <Button
           type="link"
@@ -38,7 +59,7 @@ const ResultTest = () => {
           type="link"
           className="result-test__name result-test__name--case"
         >
-          {idx % 2 === 0 ? `Calculator - Failed` : `Calculator - Passed` }
+          {idx % 2 === 0 ? `Calculator - Failed` : `Calculator - Passed`}
         </Button>
         <div className="result-test__statistic">
           <p className="result-test__value">
@@ -58,7 +79,11 @@ const ResultTest = () => {
           strokeWidth={5}
           percent={25}
           strokeColor={idx % 2 === 0 ? `#E53934` : `#66BB69`}
-          className={idx % 2 === 0 ? `result-test__progress` : `result-test__progress failed`}
+          className={
+            idx % 2 === 0
+              ? `result-test__progress`
+              : `result-test__progress failed`
+          }
         />
       </li>
     );
@@ -92,6 +117,18 @@ const ResultTest = () => {
       <ul className="result-test__devices result-test__devices--case">
         {caseItem}
       </ul>
+      <Drawer
+        placement="right"
+        closable={true}
+        width={width}
+        onClose={onClose}
+        visible={visibility}
+      >
+        <button className="result-test__drawer-expand" onClick={changeWidth}>
+          {drawerIcon}
+        </button>
+        <DrawerContent />
+      </Drawer>
     </div>
   );
 };

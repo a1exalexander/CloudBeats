@@ -1,0 +1,27 @@
+.drawer-content-errors {
+  padding: 0 40px;
+  @include flex-col(flex-start, center);
+  &__list {
+    list-style: none;
+    margin-bottom: 32px;
+    padding: 0;
+    width: 100%;
+  }
+  &__item {
+    background-color: #DFE4EC;
+    margin-bottom: 16px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: $N910;
+    font-size: $H30;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__error {
+    color: $N910;
+  }
+  &__img {
+    margin: auto;
+  }
+}
