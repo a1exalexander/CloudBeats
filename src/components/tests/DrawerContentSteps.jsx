@@ -105,7 +105,7 @@ const TreeNode = ({ data, child }) => {
         </CopyToClipboard>
         <Modal visible={modalVisibility} onCancel={handleCancel} footer={null}>
           <div className="drawer-content-steps__modal">
-            <h4 class="drawer-content-steps__modal-message">{`some error message`}</h4>
+            <h4 className="drawer-content-steps__modal-message">{`some error message`}</h4>
             <img src={ErrorImg} alt="error" />
           </div>
         </Modal>

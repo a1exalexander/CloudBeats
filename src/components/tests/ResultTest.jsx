@@ -22,7 +22,7 @@ const ResultTest = () => {
   };
 
   const changeWidth = () => {
-    width === 720 ? setWidth('70%') : setWidth(720);
+    width === 720 ? setWidth('calc(100% - 440px)') : setWidth(720);
   };
 
   const drawerIcon = width === 720 ? <IconFullEnter /> : <IconFullLeave />

@@ -42,7 +42,7 @@ const DrawerContentError = () => {
       <img
         src={ErrorImg}
         alt="error-screen"
-        class="drawer-content-errors__img"
+        className="drawer-content-errors__img"
       />
     </div>
   );
