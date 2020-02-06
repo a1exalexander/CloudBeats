@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Radio, Tooltip, Modal, message  } from "antd";
+import { Radio, Tooltip, Modal, message } from "antd";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { ReactComponent as IconTop } from "../../assets/svg/Interface/Sort down.svg";
 import { ReactComponent as IconOk } from "../../assets/svg/Interface/Check in circle.svg";
@@ -22,13 +22,13 @@ const TreeNode = ({ data, child }) => {
     visibility ? setVisibility(false) : setVisibility(true);
   };
   const handleCancel = () => {
-    setModalVisibility(false)
+    setModalVisibility(false);
   };
   const showModal = () => {
-    setModalVisibility(true)
+    setModalVisibility(true);
   };
   const info = () => {
-    message.success('Copied to clipboard');
+    message.success("Copied to clipboard");
   };
   const plusIcon = expand ? (
     <IconMinus
@@ -68,7 +68,9 @@ const TreeNode = ({ data, child }) => {
         <div className="drawer-content-steps__expanded-block drawer-content-steps__expanded-block--error">
           <Radio.Group defaultValue="a">
             <Radio.Button value="a">Error</Radio.Button>
-            <Radio.Button value="b" onClick={showModal}>Screenshot</Radio.Button>
+            <Radio.Button value="b" onClick={showModal}>
+              Screenshot
+            </Radio.Button>
           </Radio.Group>
           <div className="drawer-content-steps__time-row">
             <div className="drawer-content-steps__wrapper-expand">
@@ -101,14 +103,10 @@ const TreeNode = ({ data, child }) => {
             </Tooltip>
           </div>
         </CopyToClipboard>
-        <Modal
-          visible={modalVisibility}
-          onCancel={handleCancel}
-          footer={null}
-        >
+        <Modal visible={modalVisibility} onCancel={handleCancel} footer={null}>
           <div className="drawer-content-steps__modal">
             <h4 class="drawer-content-steps__modal-message">{`some error message`}</h4>
-            <img src={ErrorImg} alt="error"/>
+            <img src={ErrorImg} alt="error" />
           </div>
         </Modal>
       </div>
@@ -125,7 +123,7 @@ const TreeNode = ({ data, child }) => {
           <IconExpandRight
             className={`drawer-content-steps__expand ${
               visibility ? "expanded" : ""
-            }`}
+            } ${data.alone ? "grey" : ""}`}
             onClick={changeVisibility}
           />
         )}
@@ -158,18 +156,21 @@ const DrawerContentError = () => {
       name: "Init",
       duration: 3.0,
       level: "first",
+      alone: false,
       childrens: [
         {
           status: true,
           name: 'mob.init({"autoName":"UIAuthor2"})',
           duration: 3.0,
           level: "second",
+          alone: true,
           childrens: [
             {
               status: true,
               name: 'mob.waitVisible({"autoName":"UIAuthor2"})',
               duration: 3.0,
               level: "third",
+              alone: true,
               childrens: [],
               expand_info: {
                 first: 3.4,
@@ -182,6 +183,7 @@ const DrawerContentError = () => {
               name: 'mob.waitVisible({"autoName":"UIAuthor2"})',
               duration: 3.0,
               level: "third",
+              alone: true,
               childrens: [],
               expand_info: {
                 first: 3.4,
@@ -196,12 +198,14 @@ const DrawerContentError = () => {
           name: 'mob.init({"autoName":"UIAuthor2"})',
           duration: 3.0,
           level: "second",
+          alone: true,
           childrens: [
             {
               status: true,
               name: 'mob.waitVisible({"autoName":"UIAuthor2"})',
               duration: 3.0,
               level: "third",
+              alone: true,
               childrens: [],
               expand_info: {
                 first: 3.4,
@@ -218,6 +222,7 @@ const DrawerContentError = () => {
       name: "Press'8'",
       duration: 3.0,
       level: "first",
+      alone: true,
       childrens: [
         {
           status: false,

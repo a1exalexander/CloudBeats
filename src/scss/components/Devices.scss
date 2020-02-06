@@ -112,6 +112,12 @@
     padding: 0 20px;
     font-weight: 500;
   }
+  &__main-list-icon {
+    @include svg(18px, $N910);
+    margin-right: 6px;
+    position: relative;
+    top: 4px;
+  }
   & .devices__search {
     .ant-select-selection {
       background-color: #FAFAFC;

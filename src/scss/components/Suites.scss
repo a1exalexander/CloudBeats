@@ -63,6 +63,12 @@
   }
   &__icon {
     margin-right: 16px;
+    &--trash {
+      @include svg(24px, $N910);
+      position: relative;
+      left: -6px;
+      margin-right: 5px;
+    }
   }
   &__project-wrapper {
     padding: 0 20px 20px;
@@ -112,6 +118,9 @@
     list-style: none;
     padding: 0;
     width: 100%;
+  }
+  &__settings-icon {
+    fill: $N910;
   }
   &__project-item {
     font-size: 16px;

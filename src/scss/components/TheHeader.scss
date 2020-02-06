@@ -68,5 +68,8 @@
     position: relative;
     bottom: 1px;
   }
+  .ant-avatar {
+    @include size(24px);
+  }
 }
 

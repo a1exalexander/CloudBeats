@@ -54,6 +54,9 @@
     &.expanded {
       transform: rotate(90deg) translateX(-50%);
     }
+    &.grey {
+      fill: $N60;
+    }
   }
   &__result-icon {
     @include svg(24px, $G250);

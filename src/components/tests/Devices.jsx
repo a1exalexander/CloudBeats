@@ -13,6 +13,10 @@ import { ReactComponent as IconAlphabet } from "../../assets/svg/Alphabet.svg";
 import { ReactComponent as IconGrid } from "../../assets/svg/Grid.svg";
 import { ReactComponent as IconList } from "../../assets/svg/List.svg";
 import { ReactComponent as IconActions } from "../../assets/svg/Actions.svg";
+import { ReactComponent as IconOS } from "../../assets/svg/Interface/Android 2.svg";
+import { ReactComponent as IconGPU } from "../../assets/svg/Interface/GPU.svg";
+import { ReactComponent as IconCPU } from "../../assets/svg/Interface/CPU.svg";
+import { ReactComponent as IconResolution } from "../../assets/svg/Interface/Resolution.svg";
 
 const { Panel } = Collapse;
 const { Option } = Select;
@@ -94,21 +98,24 @@ const Devices = () => {
       <Panel header={genHeader(el)} key={el} style={customPanelStyle}>
         <ul className="devices__main-list">
           <li>
-            OS
+            <IconOS className="devices__main-list-icon"/>
+            <span>OS</span>
             <ul className="devices__sub-list">
               <li>Android 9.0 (Pie), upgradable to Android 10;</li>
               <li>EMUI 10</li>
             </ul>
           </li>
           <li>
-            Resolution
+            <IconResolution className="devices__main-list-icon"/>
+            <span>Resolution</span>
             <ul className="devices__sub-list">
               <li>1080 x 2340 pixels, 19.5:9 ratio (~398 ppi density)</li>
               <li>DCI-P3</li>
             </ul>
           </li>
           <li>
-            CPU
+            <IconCPU className="devices__main-list-icon"/>
+            <span>CPU</span>
             <ul className="devices__sub-list">
               <li>
                 Octa-core (2x2.6 GHz Cortex-A76 & 2x1.92 GHz Cortex-A76 & 4x1.8
@@ -117,7 +124,8 @@ const Devices = () => {
             </ul>
           </li>
           <li>
-            GPU
+            <IconGPU className="devices__main-list-icon"/>
+            <span>GPU</span>
             <ul className="devices__sub-list">
               <li>Mali-G76 MP10</li>
             </ul>

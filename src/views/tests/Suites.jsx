@@ -12,12 +12,12 @@ import {
 import Devices from "../../components/tests/Devices";
 import Results from "../../components/tests/Results";
 import { ReactComponent as IconEdit } from "../../assets/svg/Edit.svg";
-import { ReactComponent as IconRemove } from "../../assets/svg/Remove.svg";
+import { ReactComponent as IconRemove } from "../../assets/svg/Interface/Trash.svg";
 import { ReactComponent as IconNewDoc } from "../../assets/svg/New document.svg";
 import { ReactComponent as IconNewFolder } from "../../assets/svg/New folder.svg";
 import { ReactComponent as IconExpand } from "../../assets/svg/Expand.svg";
 import { ReactComponent as IconFolder } from "../../assets/svg/Folder.svg";
-import { ReactComponent as IconDocument } from "../../assets/svg/Document.svg";
+import { ReactComponent as IconDocument } from "../../assets/svg/Interface/Settings.svg";
 import { ReactComponent as IconActions } from "../../assets/svg/Actions.svg";
 
 const { TabPane } = Tabs;
@@ -76,10 +76,10 @@ const Suites = () => {
           </div>
           <DirectoryTree className="suites__tree" multiple defaultExpandAll>
             <TreeNode title="All tests (4)" key="0-0" icon={<IconFolder/>}>
-              <TreeNode title="All Calculators" key="0-0-0" isLeaf icon={<IconDocument />}/>
-              <TreeNode title="Calc - passing" key="0-0-1" isLeaf icon={<IconDocument />}/>
-              <TreeNode title="Test" key="0-0-2" isLeaf icon={<IconDocument />}/>
-              <TreeNode title="Wiki" key="0-0-3" isLeaf icon={<IconDocument />}/>
+              <TreeNode title="All Calculators" key="0-0-0" isLeaf icon={<IconDocument className="suites__settings-icon"/>}/>
+              <TreeNode title="Calc - passing" key="0-0-1" isLeaf icon={<IconDocument className="suites__settings-icon"/>}/>
+              <TreeNode title="Test" key="0-0-2" isLeaf icon={<IconDocument className="suites__settings-icon"/>}/>
+              <TreeNode title="Wiki" key="0-0-3" isLeaf icon={<IconDocument className="suites__settings-icon"/>}/>
             </TreeNode>
           </DirectoryTree>
         </div>
@@ -139,7 +139,7 @@ const Suites = () => {
                     Edit
                   </a>
                   <a href="/" className="suites__btn">
-                    <IconRemove className="suites__icon" />
+                    <IconRemove className="suites__icon suites__icon--trash" />
                     Remove
                   </a>
                 </div>
